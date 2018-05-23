@@ -6,7 +6,7 @@ import glob
 from skimage.feature import hog
 
 # Read in our vehicles
-car_images = glob.glob('*.jpeg')
+car_images = glob.glob('smallset/*.jpeg')
 
 
 # Define a function to return HOG features and visualization
@@ -47,3 +47,4 @@ plt.title('Example Car Image')
 plt.subplot(122)
 plt.imshow(hog_image, cmap='gray')
 plt.title('HOG Visualization')
+plt.show()

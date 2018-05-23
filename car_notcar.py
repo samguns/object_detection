@@ -8,7 +8,7 @@ import glob
 # from skimage import color, exposure
 # images are divided up into vehicles and non-vehicles
 
-images = glob.glob('*.jpeg')
+images = glob.glob('smallset/*.jpeg')
 cars = []
 notcars = []
 
@@ -59,3 +59,4 @@ plt.title('Example Car Image')
 plt.subplot(122)
 plt.imshow(notcar_image)
 plt.title('Example Not-car Image')
+plt.show()
