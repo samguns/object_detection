@@ -112,13 +112,21 @@ for image in images:
 # sample_size = 500
 # cars = cars[0:sample_size]
 # notcars = notcars[0:sample_size]
+data_info = data_look(cars, notcars)
+
+print('Your function returned a count of',
+      data_info["n_cars"], ' cars and',
+      data_info["n_notcars"], ' non-cars')
+print('of size: ', data_info["image_shape"], ' and data type:',
+      data_info["data_type"])
+
 
 ### TODO: Tweak these parameters and see how the results change.
-color_space = 'RGB'  # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
-orient = 9  # HOG orientations
+color_space = 'YCrCb'  # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
+orient = 8  # HOG orientations
 pix_per_cell = 8  # HOG pixels per cell
 cell_per_block = 2  # HOG cells per block
-hog_channel = 0  # Can be 0, 1, 2, or "ALL"
+hog_channel = "ALL"  # Can be 0, 1, 2, or "ALL"
 spatial_size = (32, 32)  # Spatial binning dimensions
 hist_bins = 32  # Number of histogram bins
 spatial_feat = True  # Spatial features on or off
